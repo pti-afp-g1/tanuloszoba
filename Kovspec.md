@@ -14,3 +14,19 @@ A diákok gyakorlása számonkérése végig digitális, interaktív kultúráju
 ## Megrendelői cél: 
 1. több idő jusson az oktatásra azzal, hogy az tanórákra történő felkészülési időt és tanárok számonkérésekre fordított idejét csökkentjük. (munkaóra megtakarítás amely a rendundáns folyamatokat megszüntetésével valósul meg, amelyben ki kell használni, hogy egy feladatot egyszer kell csak elkészíteni, amely azt követően átalakítható, előszedhető) 
 2. interaktív digitális oktatás, amely a mai diákok igényeihez igazodik. (passzivitás megszüntetés, játszva tanulás)
+
+###### Megrendelői "atomi" igényspecifikáció:
+
+Feladat típusok: 
+1. képek összepárosítása
+2. memóriajáték: képek párosítása 
+3. Párosítsa össze az összetartozó szövegeket. előre megadott párosítások.
+4. Képek puzzleszerű kirakása
+5. Képek és szöveg összepárosítása
+6. Hangok párosítása képekkel, szövegekkel
+7. A tananyag szövegének hiányzó részeinek kiegészítése. Önállóan vagy előre megadott szöveggel
+8. A tananyag szövege alapján igaz hamis állításokat fogalmaz meg: igaz-hamis.
+9. Tananyag szövege alapján a megoldások közül egy, vagy több megoldás kiválasztása.
+10. A tananyag szövege alapján rakja sorba a szövegdarabokat.
+11. Képeken szereplő elemek megnevezése.
+12. Nyitott mondat befejezése.
