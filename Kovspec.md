@@ -15,6 +15,11 @@ A diákok gyakorlása számonkérése végig digitális, interaktív kultúráju
 1. több idő jusson az oktatásra azzal, hogy az tanórákra történő felkészülési időt és tanárok számonkérésekre fordított idejét csökkentjük. (munkaóra megtakarítás amely a rendundáns folyamatokat megszüntetésével valósul meg, amelyben ki kell használni, hogy egy feladatot egyszer kell csak elkészíteni, amely azt követően átalakítható, előszedhető) 
 2. interaktív digitális oktatás, amely a mai diákok igényeihez igazodik. (passzivitás megszüntetés, játszva tanulás)
 
+## Megrendelői követelmény:
+1. A kialakíott feladatokat, gyakorlatokat elő lehessen szedni és át lehessen alakítani, továbbfejleszteni (tesztekhez, feladatsorokhoz is). 
+Tesztkérdések, feladatsorok helyes megoldásait tárolja, a tanuló válaszait tárolja, ellenőrizze. (felhasználónként) Feladatokhoz időlimitet, pontokat is lehessen rendelni, amikből kiszámolja az összpontszámot, százalékot és érdemjegyet.
+3. A webes alkalmazásba bejelentkezhessenek a userek (diákok és tanárok egyaránt) asztali és mobileszközökön egyaránt és a feladatsorok kitöltése feladatok megoldása megvalósulhasson mindezen eszközökön.
+
 ###### Megrendelői "atomi" igényspecifikáció:
 
 Feladat típusok: 
