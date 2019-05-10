@@ -10,3 +10,7 @@ A jelenlegi diákok nagyban különböznek az ezredforduló előtt születettekt
 ## Megrendelői vízió (Vágyálom)
 Olyan oktatást, számonkérést segítő feladatok elkészítése, amelyek digitális formában gyorsan laikusként állíthatók össze. Kiemelt szempont, hogy az ellenőrzés, javítás időt ne vegyen igénybe, lehetőség szerint automatizált legyen. Egy-egy feladat egyszeri elkészítését követően a tanórákon a feladatok újra felhasználhatók legyenek. A számonkérés előállítására fordított idő kizárólag a már előállított feladatok összeválogatására és a tesztírási időre korlátozódjon. A számonkérés kiértékelésére fordított idő az automatizált javításnak köszönhetően kizárólag az esszé jellegű feladatok kiértékelésére korlátozódjon.
 A diákok gyakorlása számonkérése végig digitális, interaktív kultúrájukba illeszkedjen, és teljesen papírmentesen valósuljon meg.
+
+## Megrendelői cél: 
+1. több idő jusson az oktatásra azzal, hogy az tanórákra történő felkészülési időt és tanárok számonkérésekre fordított idejét csökkentjük. (munkaóra megtakarítás amely a rendundáns folyamatokat megszüntetésével valósul meg, amelyben ki kell használni, hogy egy feladatot egyszer kell csak elkészíteni, amely azt követően átalakítható, előszedhető) 
+2. interaktív digitális oktatás, amely a mai diákok igényeihez igazodik. (passzivitás megszüntetés, játszva tanulás)
