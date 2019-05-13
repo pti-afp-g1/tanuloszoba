@@ -63,7 +63,7 @@
 				</x:List>
 			</data>
 			<data key="d4">
-				<y:RectD X="276.80972972972984" Y="414.75" Width="213.19027027027016" Height="380"/>
+				<y:RectD X="276.80972972972984" Y="414.75" Width="213.19027027027016" Height="418"/>
 			</data>
 			<data key="d6">
 				<y:GraphMLReference ResourceKey="4"/>
@@ -97,7 +97,6 @@
 							<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
 								<y:Label.Text><![CDATA[Felhasználó:
 - Tanulói regisztráció
-- Bejelentkezés
 - Kijelentkezés]]></y:Label.Text>
 								<y:Label.Style>
 									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" wrapping="WORD" clipText="false" font="{y:GraphMLReference 1}" textFill="BLACK"/>
@@ -116,10 +115,11 @@
 					<data key="d3">
 						<x:List>
 							<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
-								<y:Label.Text><![CDATA[Regisztrálatlan
-felhasználó:
+								<y:Label.Text><![CDATA[Vendég felhasználó:
 - Információs főoldal
-megtekintése]]></y:Label.Text>
+megtekintése   
+- Regisztráció
+- Bejelentkezés]]></y:Label.Text>
 								<y:Label.Style>
 									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" wrapping="WORD" clipText="false" font="{y:GraphMLReference 1}" textFill="BLACK"/>
 								</y:Label.Style>
@@ -127,7 +127,7 @@ megtekintése]]></y:Label.Text>
 						</x:List>
 					</data>
 					<data key="d4">
-						<y:RectD X="285.80972972972984" Y="705.75" Width="153.19027027027028" Height="80"/>
+						<y:RectD X="285.80972972972984" Y="692.75" Width="153.19027027027028" Height="128"/>
 					</data>
 					<data key="d6">
 						<demostyle:FlowchartNodeStyle type="process" stroke="{y:GraphMLReference 2}" fill="{y:GraphMLReference 3}"/>
