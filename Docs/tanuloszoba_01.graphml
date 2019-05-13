@@ -96,6 +96,7 @@
 						<x:List>
 							<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
 								<y:Label.Text><![CDATA[Felhasználó:
+- Tanulói regisztráció
 - Bejelentkezés
 - Kijelentkezés]]></y:Label.Text>
 								<y:Label.Style>
