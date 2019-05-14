@@ -43,9 +43,9 @@ A becslés az első verzióban megvalósítandó vállalásokról szól.
 7) Kijelentkezés oldal               1 munkaóra - Albert
 8) Feladat feltöltés oldal           2 munkaóra - Zoli 
 ### Üzleti logika oldalai
-1) Feladatok feltöltése oldal        ... munkaóra
-2) Megoldások feltöltése oldal       ... munkaóra
-3) Feladatok megjelenítése oldal     ... munkaóra
+1) Feladatok feltöltése oldal        2 munkaóra
+2) Megoldások feltöltése oldal       1 munkaóra
+3) Feladatok megjelenítése oldal     1 munkaóra
 
 ## Tartalom feltöltés
 1) Példafeladatok feltöltése         0.5 munkaóra
