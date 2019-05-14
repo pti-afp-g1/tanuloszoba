@@ -4,9 +4,9 @@ A becslés az első verzióban megvalósítandó vállalásokról szól.
 
 ## Adatbázis
 ### Felhasználókezelés modul
-1) Táblák létrehozása               ... munkaóra
+1) Táblák létrehozása               2 munkaóra - Zoli
 ### Üzleti logika modul    
-1) Táblák létrehozása               ... munkaóra
+1) Táblák létrehozása               2 munkaóra - Zoli
 
 ## Funkciók megvalósítása
 ### Felhasználókezelés funkciói
@@ -37,11 +37,11 @@ A becslés az első verzióban megvalósítandó vállalásokról szól.
 1) Statikus információs főoldal      ... munkaóra
 2) Regisztrációs oldal               ... munkaóra
 3) Bejelentkezés oldal               ... munkaóra
-4) Felhasználók listázása oldal      ... munkaóra
-5) Felhasználó törlés oldal          ... munkaóra
-6) Felhasználó szerkesztés oldal     ... munkaóra
+4) Felhasználók listázása oldal      2 munkaóra - Zoli
+5) Felhasználó törlés oldal          1 munkaóra - Zoli
+6) Felhasználó szerkesztés oldal     1 munkaóra - Zoli
 7) Kijelentkezés oldal               ... munkaóra
-8) Feladat feltöltés oldal           ... munkaóra
+8) Feladat feltöltés oldal           2 munkaóra - Zoli 
 ### Üzleti logika oldalai
 1) Feladatok feltöltése oldal        ... munkaóra
 2) Megoldások feltöltése oldal       ... munkaóra
