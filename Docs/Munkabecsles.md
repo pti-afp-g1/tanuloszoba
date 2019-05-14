@@ -1,5 +1,5 @@
 # Munkaórabecslés ajánlathoz
-Munkaórák becslése kerül be a megrendelő felé küldendő ajánlatba és ez alapján határozzuk meg a fejlsztés díját.
+Munkaórák becslése kerül be a megrendelő felé küldendő ajánlatba és ez alapján határozzuk meg a fejlesztés díját.
 A becslés az első verzióban megvalósítandó vállalásokról szól.
 
 ## Adatbázis
