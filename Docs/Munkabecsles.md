@@ -18,9 +18,9 @@ A becslés az első verzióban megvalósítandó vállalásokról szól.
 #### Felhasználó funkciói
 1) Kijelentkezés                    1 munkaóra  - Tibi
 #### Vendég felhasználó
-1) Információs főoldal               ... munkaóra
-2) Regisztráció                      ... munkaóra
-3) Bejelentkezés                     ... munkaóra
+1) Információs főoldal               2 munkaóra - Albert
+2) Regisztráció                      1 munkaóra - Albert
+3) Bejelentkezés                     1 munkaóra - Albert
 ### Üzleti logika funkciói
 #### Tanári jogosultságú funkciók
 1) Feladatok feltöltése              ... munkaóra
@@ -34,13 +34,13 @@ A becslés az első verzióban megvalósítandó vállalásokról szól.
 2) Animációk készítése (card flip)   1 munkaóra  - Tibi
 3) Kártyák tervezése (hátlap, keret) 1 munkaóra  - Tibi
 ### Felhasználó kezelés oldalai
-1) Statikus információs főoldal      ... munkaóra
-2) Regisztrációs oldal               ... munkaóra
-3) Bejelentkezés oldal               ... munkaóra
+1) Statikus információs főoldal      2 munkaóra - Albert
+2) Regisztrációs oldal               1 munkaóra - Albert
+3) Bejelentkezés oldal               1 munkaóra - Albert
 4) Felhasználók listázása oldal      2 munkaóra - Zoli
 5) Felhasználó törlés oldal          1 munkaóra - Zoli
 6) Felhasználó szerkesztés oldal     1 munkaóra - Zoli
-7) Kijelentkezés oldal               ... munkaóra
+7) Kijelentkezés oldal               1 munkaóra - Albert
 8) Feladat feltöltés oldal           2 munkaóra - Zoli 
 ### Üzleti logika oldalai
 1) Feladatok feltöltése oldal        ... munkaóra
@@ -51,5 +51,7 @@ A becslés az első verzióban megvalósítandó vállalásokról szól.
 1) Példafeladatok feltöltése         ... munkaóra
 2) Példamegoldások feltöltése        ... munkaóra
 
+## Tesztelés
+1) Bejelentkezés, regisztráció teszt  2 munkaóra - Albert
 --------------------------------------------------
 Első verzió szumma munkaórája:       ... munkaóra
