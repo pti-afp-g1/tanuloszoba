@@ -48,8 +48,8 @@ A becslés az első verzióban megvalósítandó vállalásokról szól.
 3) Feladatok megjelenítése oldal     ... munkaóra
 
 ## Tartalom feltöltés
-1) Példafeladatok feltöltése         ... munkaóra
-2) Példamegoldások feltöltése        ... munkaóra
+1) Példafeladatok feltöltése         0.5 munkaóra
+2) Példamegoldások feltöltése        0.5 munkaóra
 
 ## Tesztelés
 1) Bejelentkezés, regisztráció teszt  2 munkaóra - Albert
