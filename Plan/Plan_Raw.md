@@ -1,11 +1,6 @@
 # ADATMODELL
 A táblaszerkezet mindenképpen két fő egységből áll. Felhasználó kezelés és a logika táblái. Semmiképp nem keveredhetnek a továbbiakban kialakítandó funkciók integritásának megőrzése érdekében.
 # JOGOK
-## 1. lehetőség
-Az általában megszokott 3 rétegű jogosultsági rendszert követjük: vendég, regisztrált felhasználó, admin.
-Regisztrált felhasználót flag-elni szükséges, miszerint tanár-e, vagy diák. (A "mindkettő" esetet zárjuk ki első körben)
-Az egyes funkciók elérhetősége ezen szerepkörök szerint oszlik meg. - feladatspecifikusan a funkciók eltérők lehetnek. Konkretizálás csak adott feladat mellett való döntés idején esedékes.
-## 2. lehetőség
 - Alapvetően két típust különböztetünkmeg: vendég és felhasználó (session változóban tárolt adatokkal)
 - A felhasználókat egy RBAC (hierarchikus jogosultság rendszer) különbözteti meg
 - Minden regisztrált felhasználó megkapja a diák jogosultságot
