@@ -11,12 +11,12 @@ A becslés az első verzióban megvalósítandó vállalásokról szól.
 ## Funkciók megvalósítása
 ### Felhasználókezelés funkciói
 #### Adminisztrátori funkciók
-1) Regisztráció                     ... munkaóra
-2) Felhasználó szerkesztés          ... munkaóra
-3) Jogosultság beállítás            ... munkaóra
-4) Felhasználó törlés               ... munkaóra
+1) Regisztráció                     2 munkaóra - Tibi
+2) Felhasználó szerkesztés          1 munkaóra  - Tibi
+3) Jogosultság beállítás            2 munkaóra  - Tibi
+4) Felhasználó törlés               1 munkaóra  - Tibi 
 #### Felhasználó funkciói
-1) Kijelentkezés                    ... munkaóra
+1) Kijelentkezés                    1 munkaóra  - Tibi
 #### Vendég felhasználó
 1) Információs főoldal               ... munkaóra
 2) Regisztráció                      ... munkaóra
@@ -30,9 +30,9 @@ A becslés az első verzióban megvalósítandó vállalásokról szól.
 2) Feladat algoritmusok              ... munkaóra
 3) Eredmény algoritmusok             ... munkaóra
 ## Webdesign
-1) Egységes design elkészítése (css) ... munkaóra
-2) Animációk készítése (card flip)   ... munkaóra
-3) Kártyák tervezése (hátlap, keret) ... munkaóra
+1) Egységes design elkészítése (css) 1 munkaóra   - Tibi
+2) Animációk készítése (card flip)   1 munkaóra  - Tibi
+3) Kártyák tervezése (hátlap, keret) 1 munkaóra  - Tibi
 ### Felhasználó kezelés oldalai
 1) Statikus információs főoldal      ... munkaóra
 2) Regisztrációs oldal               ... munkaóra
