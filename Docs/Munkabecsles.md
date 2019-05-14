@@ -54,4 +54,4 @@ A becslés az első verzióban megvalósítandó vállalásokról szól.
 ## Tesztelés
 1) Bejelentkezés, regisztráció teszt  2 munkaóra - Albert
 --------------------------------------------------
-Első verzió szumma munkaórája:       ... munkaóra
+Első verzió szumma munkaórája:       40 munkaóra
