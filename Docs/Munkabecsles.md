@@ -18,18 +18,21 @@ A becslés az első verzióban megvalósítandó vállalásokról szól.
 #### Felhasználó funkciói
 1) Kijelentkezés                    ... munkaóra
 #### Vendég felhasználó
-1) Információs főoldal              ... munkaóra
-2) Regisztráció                     ... munkaóra
-3) Bejelentkezés                    ... munkaóra
+1) Információs főoldal               ... munkaóra
+2) Regisztráció                      ... munkaóra
+3) Bejelentkezés                     ... munkaóra
 ### Üzleti logika funkciói
 #### Tanári jogosultságú funkciók
-1) Feladatok feltöltése             ... munkaóra
-2) Megoldások feltöltése            ... munkaóra
+1) Feladatok feltöltése              ... munkaóra
+2) Megoldások feltöltése             ... munkaóra
 #### Tanári és diák jogosultsággal elérhető funkciók
 1) Feladatok megjelenítése
-
+2) Feladat algoritmusok              ... munkaóra
+3) Eredmény algoritmusok             ... munkaóra
 ## Webdesign
 1) Egységes design elkészítése (css) ... munkaóra
+2) Animációk készítése (card flip)   ... munkaóra
+3) Kártyák tervezése (hátlap, keret) ... munkaóra
 ### Felhasználó kezelés oldalai
 1) Statikus információs főoldal      ... munkaóra
 2) Regisztrációs oldal               ... munkaóra
