@@ -6,11 +6,12 @@ Az általában megszokott 3 rétegű jogosultsági rendszert követjük: vendég
 Regisztrált felhasználót flag-elni szükséges, miszerint tanár-e, vagy diák. (A "mindkettő" esetet zárjuk ki első körben)
 Az egyes funkciók elérhetősége ezen szerepkörök szerint oszlik meg. - feladatspecifikusan a funkciók eltérők lehetnek. Konkretizálás csak adott feladat mellett való döntés idején esedékes.
 ## 2. lehetőség
-Alapvetően két típust különböztetünkmeg: vendég és felhasználó (session változóban tárolt adatokkal)
-A felhasználókat egy RBAC (hierarchikus jogosultság rendszer) különbözteti meg
-Minden regisztrált felhasználó megkapja a diák jogosultságot
-Az adminisztrátorok tudnak adni tanár és admin jogokat
-Egy felhasználóhoz csak egy jogosultásg tartozik. Ha több lenne, a legerősebb az érvényes, de jogosultság módosításakor minden korábbi kapcsolatot törlünk az adatbázisból
+- Alapvetően két típust különböztetünkmeg: vendég és felhasználó (session változóban tárolt adatokkal)
+- A felhasználókat egy RBAC (hierarchikus jogosultság rendszer) különbözteti meg
+- Minden regisztrált felhasználó megkapja a diák jogosultságot
+- Az adminisztrátorok tudnak adni tanár és admin jogokat
+- Egy felhasználóhoz csak egy jogosultásg tartozik. Ha több lenne, a legerősebb az érvényes, de jogosultság módosításakor minden korábbi kapcsolatot 
+törlünk az adatbázisból
 # ADMINISZTRÁTORI SZEREPKÖR
 Az adminisztrátor a 0. körben a későbbiekben automatizálható feladatokat látja el, úgymint felhasználó regisztrálás, felhasználó szerkesztés, jogosultságok beállítása, felhasználó törlés.
 A későbbikben ezen funkciók jó része nem manuálisan fog történni, ennek kidolgozása és mértéke megrendelői igénytől függ, amely egyeztetést kíván.
