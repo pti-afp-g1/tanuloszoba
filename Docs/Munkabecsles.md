@@ -23,8 +23,8 @@ A becslés az első verzióban megvalósítandó vállalásokról szól.
 3) Bejelentkezés                     1 munkaóra - Albert
 ### Üzleti logika funkciói
 #### Tanári jogosultságú funkciók
-1) Feladatok feltöltése              ... munkaóra
-2) Megoldások feltöltése             ... munkaóra
+1) Feladatok feltöltése              1 munkaóra
+2) Megoldások feltöltése             1 munkaóra
 #### Tanári és diák jogosultsággal elérhető funkciók
 1) Feladatok megjelenítése
 2) Feladat algoritmusok              ... munkaóra
