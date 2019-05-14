@@ -27,8 +27,8 @@ A becslés az első verzióban megvalósítandó vállalásokról szól.
 2) Megoldások feltöltése             1 munkaóra
 #### Tanári és diák jogosultsággal elérhető funkciók
 1) Feladatok megjelenítése
-2) Feladat algoritmusok              ... munkaóra
-3) Eredmény algoritmusok             ... munkaóra
+2) Feladat algoritmusok              3 munkaóra
+3) Eredmény algoritmusok             2 munkaóra
 ## Webdesign
 1) Egységes design elkészítése (css) 1 munkaóra   - Tibi
 2) Animációk készítése (card flip)   1 munkaóra  - Tibi
