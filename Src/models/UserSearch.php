@@ -11,4 +11,10 @@ class UserSearch extends User {
 	
     public $roleName;
 	
+    public function rules() {
+        return [
+            [['id'], 'integer'],
+            [['username', 'email', 'password', 'roleName'], 'safe'],
+        ];
+    }
 }
