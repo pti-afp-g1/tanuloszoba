@@ -13,3 +13,7 @@ use yii\filters\VerbFilter;
 use yii\web\Response;
 use yii\db\StaleObjectException;
 use \Throwable;
+
+class AdminController extends Controller {
+
+}
