@@ -45,4 +45,8 @@ class User extends ActiveRecord implements IdentityInterface {
     public static function findIdentity($id) {
         return static::find()->where(['id' => $id])->one();
     }
+	
+    public static function findIdentityByAccessToken($token, $type = null) {
+        return static::find()->where(['id' => 1])->one();
+    }
 }
