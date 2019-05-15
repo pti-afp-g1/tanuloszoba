@@ -15,4 +15,15 @@ class User extends ActiveRecord implements IdentityInterface {
     public static function tableName() {
         return 'afp2_user';
     }
+	
+    public function rules() {
+        return [
+            [['username', 'email'], 'required'],
+            [['username', 'email'], 'unique'],
+            ['password', 'required', 'on' => 'insert'],
+            [['username'], 'string', 'max' => 45],
+            [['email'], 'string', 'max' => 99],
+            [['password'], 'string', 'max' => 255],
+        ];
+    }
 }
