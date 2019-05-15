@@ -73,4 +73,8 @@ class User extends ActiveRecord implements IdentityInterface {
     public function validatePassword($password) {
         return password_verify($password, $this->password);
     }
+	
+    public function afterFind() {
+        $this->_oldAttributes = $this->attributes;
+    }
 }
