@@ -30,4 +30,9 @@ class AuthAssignment extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
         ];
     }
+	
+    public static function find()
+    {
+        return new AuthAssignmentQuery(get_called_class());
+    }
 }
