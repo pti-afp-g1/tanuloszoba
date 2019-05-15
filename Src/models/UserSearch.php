@@ -9,4 +9,6 @@ use yii\db\Expression;
 
 class UserSearch extends User {
 	
+    public $roleName;
+	
 }
