@@ -92,4 +92,10 @@ class User extends ActiveRecord implements IdentityInterface {
         }
         return parent::beforeSave($insert);
     }
+
+    public function assignNewRole($role)
+    {
+        $this->revokeAllRole();
+        $this->assignRole($role);
+    }
 }
