@@ -41,4 +41,8 @@ class User extends ActiveRecord implements IdentityInterface {
     public static function find() {
         return new UserQuery(get_called_class());
     }
+	
+    public static function findIdentity($id) {
+        return static::find()->where(['id' => $id])->one();
+    }
 }
