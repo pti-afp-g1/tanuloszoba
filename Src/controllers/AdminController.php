@@ -44,5 +44,12 @@ class AdminController extends Controller {
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
-    }      
+    }
+
+    public function actionView($id) {
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
+    }
+      
 }
