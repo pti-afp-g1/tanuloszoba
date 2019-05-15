@@ -65,4 +65,8 @@ class User extends ActiveRecord implements IdentityInterface {
     public static function findByUsername($username) {
         return static::find()->where(['username' => $username])->one();
     }
+	
+    public static function findByEmail($email) {
+        return static::find()->where(['email' => $email])->one();
+    }
 }
