@@ -10,4 +10,5 @@ use \Exception;
 
 class User extends ActiveRecord implements IdentityInterface {
 	
+    private $_oldAttributes;
 }
