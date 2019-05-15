@@ -127,4 +127,8 @@ class User extends ActiveRecord implements IdentityInterface {
             return false;
         }
     }
+	
+    public function getAllAuthAssignment() {
+        return $this->hasMany(AuthAssignment::class, ['user_id' => 'id']);
+    }
 }
