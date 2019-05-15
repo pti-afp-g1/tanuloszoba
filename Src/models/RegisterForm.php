@@ -20,4 +20,15 @@ class RegisterForm extends Model
             ['email', 'email'],
         ];
     }
+	
+    public function validateUsername($attribute, $params)
+    {
+        if (!$this->hasErrors()) {
+            $user = $this->getUserByName();
+
+            if ($user) {
+                $this->addError($attribute, 'A felhasználónév már létezik.');
+            }
+        }
+    }
 }
