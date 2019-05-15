@@ -21,4 +21,11 @@ class ContactForm extends Model
             ['verifyCode', 'captcha'],
         ];
     }
+	
+    public function attributeLabels()
+    {
+        return [
+            'verifyCode' => 'Verification Code',
+        ];
+    }
 }
