@@ -12,4 +12,13 @@ class ContactForm extends Model
     public $subject;
     public $body;
     public $verifyCode;
+	
+    public function rules()
+    {
+        return [
+            [['name', 'email', 'subject', 'body'], 'required'],
+            ['email', 'email'],
+            ['verifyCode', 'captcha'],
+        ];
+    }
 }
