@@ -77,4 +77,8 @@ class User extends ActiveRecord implements IdentityInterface {
     public function afterFind() {
         $this->_oldAttributes = $this->attributes;
     }
+	
+    public function isChanged($attribute) {
+        return $this->_oldAttributes[$attribute] !== $this->attributes[$attribute];
+    }
 }
