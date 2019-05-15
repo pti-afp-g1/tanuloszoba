@@ -11,4 +11,8 @@ use \Exception;
 class User extends ActiveRecord implements IdentityInterface {
 	
     private $_oldAttributes;
+	
+    public static function tableName() {
+        return 'afp2_user';
+    }
 }
