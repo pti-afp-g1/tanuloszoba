@@ -98,4 +98,14 @@ class User extends ActiveRecord implements IdentityInterface {
         $this->revokeAllRole();
         $this->assignRole($role);
     }
+
+    private function assignRole($role) {
+        $auth = Yii::$app->authManager;
+        $authorRole = $auth->getRole($role);
+        try {
+            return $auth->assign($authorRole, $this->id);
+        } catch (Exception $e) {
+            return false;
+        }
+    }
 }
