@@ -118,4 +118,13 @@ class User extends ActiveRecord implements IdentityInterface {
             return false;
         }
     }
+
+    private function revokeAllRole() {
+        $auth = Yii::$app->authManager;
+        try {
+            return $auth->revokeAll($this->id);
+        } catch (Exception $e) {
+            return false;
+        }
+    }
 }
