@@ -17,4 +17,8 @@ class UserSearch extends User {
             [['username', 'email', 'password', 'roleName'], 'safe'],
         ];
     }
+	
+    public function scenarios() {
+        return Model::scenarios();
+    }
 }
