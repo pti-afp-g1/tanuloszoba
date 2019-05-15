@@ -31,4 +31,15 @@ class RegisterForm extends Model
             }
         }
     }
+	
+    public function validateEmail($attribute, $params)
+    {
+        if (!$this->hasErrors()) {
+            $user = $this->getUserByEmail();
+
+            if ($user) {
+                $this->addError($attribute, 'Az e-mail cím már létezik.');
+            }
+        }
+    }
 }
