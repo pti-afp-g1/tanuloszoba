@@ -82,5 +82,11 @@ class AdminController extends Controller {
         return $this->render('update', [
             'model' => $model,
         ]);
-    }      
+    }
+      
+    public function actionDelete($id) {
+        $this->findModel($id)->delete();
+
+        return $this->redirect(['index']);
+    }
 }
