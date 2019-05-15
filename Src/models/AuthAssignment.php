@@ -11,4 +11,15 @@ class AuthAssignment extends \yii\db\ActiveRecord
         return '{{%auth_assignment}}';
     }
 	
+    public function rules()
+    {
+        return [
+            [['item_name', 'user_id'], 'required'],
+            [['created_at'], 'integer'],
+            [['item_name', 'user_id'], 'string', 'max' => 64],
+            [['item_name', 'user_id'], 'unique', 'targetAttribute' => ['item_name', 'user_id']],
+            [['item_name'], 'exist', 'skipOnError' => true, 'targetClass' => AuthItem::className(), 'targetAttribute' => ['item_name' => 'name']],
+        ];
+    }
+	
 }
