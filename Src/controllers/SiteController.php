@@ -71,4 +71,22 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+    
+    public function actionRegister()
+    {
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        $model = new RegisterForm();
+
+        if ($model->load(Yii::$app->request->post()) && $model->register()) {
+            return $this->goBack();
+        }
+
+        return $this->render('register', [
+            'model' => $model,
+        ]);
+    }
+
 }
