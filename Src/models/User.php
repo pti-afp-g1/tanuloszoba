@@ -57,4 +57,8 @@ class User extends ActiveRecord implements IdentityInterface {
     public function getAuthKey() {
         //implementáljuk, ha szükségesséválik
     }
+	
+    public function validateAuthKey($authKey) {
+        //implementáljuk, ha szükségesséválik
+    }
 }
