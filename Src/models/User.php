@@ -61,4 +61,8 @@ class User extends ActiveRecord implements IdentityInterface {
     public function validateAuthKey($authKey) {
         //implementáljuk, ha szükségesséválik
     }
+	
+    public static function findByUsername($username) {
+        return static::find()->where(['username' => $username])->one();
+    }
 }
