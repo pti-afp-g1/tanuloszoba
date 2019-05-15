@@ -67,5 +67,20 @@ class AdminController extends Controller {
         return $this->render('create', [
             'model' => $model,
         ]);
+    }
+      
+    public function actionUpdate($id) {
+        $model = $this->findModel($id);
+        $role = Yii::$app->request->post()['User']['roleName'] ?? null;
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->save()) {
+                $model->assignNewRole($role);
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+        }
+
+        return $this->render('update', [
+            'model' => $model,
+        ]);
     }      
 }
