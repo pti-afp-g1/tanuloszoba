@@ -8,4 +8,9 @@ class UserQuery extends \yii\db\ActiveQuery
     {
         return parent::all($db);
     }	
+	
+    public function one($db = null)
+    {
+        return parent::one($db);
+    }
 }
