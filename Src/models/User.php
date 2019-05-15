@@ -81,4 +81,15 @@ class User extends ActiveRecord implements IdentityInterface {
     public function isChanged($attribute) {
         return $this->_oldAttributes[$attribute] !== $this->attributes[$attribute];
     }
+	
+    public function beforeSave($insert) {
+        if (!$insert && $this->isChanged('password')) {
+            if (empty($this->password)) {
+                $this->password = $this->_oldAttributes['password'];
+            } else {
+                $this->password = password_hash($this->password, PASSWORD_BCRYPT);
+            }
+        }
+        return parent::beforeSave($insert);
+    }
 }
