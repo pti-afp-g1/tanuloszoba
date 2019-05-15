@@ -52,4 +52,20 @@ class AdminController extends Controller {
         ]);
     }
       
+    public function actionCreate() {
+        $model = new User();
+        $role = Yii::$app->request->post()['User']['roleName'] ?? null;
+
+        if ($model->load(Yii::$app->request->post())) {
+            $model->password = password_hash($model->password, PASSWORD_BCRYPT);
+            if ($model->save()) {
+                $model->assignNewRole($role);
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+        }
+
+        return $this->render('create', [
+            'model' => $model,
+        ]);
+    }      
 }
