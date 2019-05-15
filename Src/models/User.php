@@ -37,4 +37,8 @@ class User extends ActiveRecord implements IdentityInterface {
             'roleName' => 'Szerep'
         ];
     }
+	
+    public static function find() {
+        return new UserQuery(get_called_class());
+    }
 }
