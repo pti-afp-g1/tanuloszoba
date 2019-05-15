@@ -59,4 +59,9 @@ class RegisterForm extends Model
     {
         return User::findByUsername($this->username);
     }
+	
+    public function getUserByEmail()
+    {
+        return User::findByEmail($this->email);
+    }
 }
