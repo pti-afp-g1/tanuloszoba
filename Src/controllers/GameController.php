@@ -41,5 +41,12 @@ class GameController extends Controller {
         return $this->render('lexical', ['deck' => $deck, 'uuid' => $uuid]);
     }
 
+    public function actionMemory() {$game = new Game(6);
+        $deck = $game->getPublicDeck();
+        $uuid = UuidHelper::uuid();
+        $_SESSION[$uuid] = $game->getSecretDeck();
+        return $this->render('memory', ['deck' => $deck, 'uuid' => $uuid]);
+    }
+
 
 }
