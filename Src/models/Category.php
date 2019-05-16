@@ -41,4 +41,9 @@ class Category extends ActiveRecord
     {
         return $this->hasOne(User::class, ['id' => 'afp2_user_id']);
     }
+	
+    public static function find()
+    {
+        return new CategoryQuery(get_called_class());
+    }
 }
