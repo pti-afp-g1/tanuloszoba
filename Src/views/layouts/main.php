@@ -1,13 +1,15 @@
 <?php
 
+/* @var $this View */
 
+/* @var $content string */
 
 use app\widgets\Alert;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use yii\web\View;
 
 $this->title = 'AFP-2 Tanulószoba';
 
@@ -39,9 +41,13 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Főoldal', 'url' => ['/site/index']],
-            ['label' => 'Regisztráció', 'url' => ['/site/register'], 'visible' => Yii::$app->user->isGuest],
+            ['label' => 'Főoldal', 'url' => ['/']],
+            ['label' => 'Dicsőségfal', 'url' => ['/hall-of-fame']],
+            ['label' => 'Játékok', 'url' => ['/game'], 'visible' => !Yii::$app->user->isGuest],
+            ['label' => 'Kategóriák', 'url' => ['/category'], 'visible' => Yii::$app->user->can('teacher')],
+            ['label' => 'Kártyák', 'url' => ['/card-pair'], 'visible' => Yii::$app->user->can('teacher')],
             ['label' => 'Admin', 'url' => ['/admin'], 'visible' => Yii::$app->user->can('admin')],
+            ['label' => 'Regisztráció', 'url' => ['/site/register'], 'visible' => Yii::$app->user->isGuest],
             Yii::$app->user->isGuest ? (
             ['label' => 'Bejelentkezés', 'url' => ['/site/login']]
             ) : (
