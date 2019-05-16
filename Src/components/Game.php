@@ -14,10 +14,10 @@ class Game {
     protected $cardPairs;
 
     public function __construct($size = 6) {
-        /*$this->setCardPairs($size);
+        $this->setCardPairs($size);
         $this->setSecretDeck();
         $this->shuffleDeck();
-        $this->setPublicDeck();*/
+        $this->setPublicDeck();
     }
 
     private function setCardPairs($size) {
