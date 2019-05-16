@@ -68,4 +68,8 @@ class Game {
     private static function getSecretDeckFromSession($identifier) {
         return $_SESSION[$identifier];
     }
+
+    private function shuffleDeck() {
+        shuffle($this->secretDeck);
+    }
 }
