@@ -52,5 +52,15 @@ class CardPairController extends Controller {
         ]);
     }
       
+    public function actionCreate() {
+        $model = new CardPair();
 
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        }
+
+        return $this->render('create', [
+            'model' => $moel,
+        ]);
+    }
 }
