@@ -15,4 +15,9 @@ class CardPairSearch extends CardPair
             [['card1', 'card2'], 'safe'],
         ];
     }	
+	
+    public function scenarios()
+    {
+        return Model::scenarios();
+    }
 }
