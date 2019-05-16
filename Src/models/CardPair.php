@@ -23,4 +23,15 @@ class CardPair extends ActiveRecord
             [['afp2_user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['afp2_user_id' => 'id']],
         ];
     }
+	
+    public function attributeLabels()
+	{
+        return [
+            'id' => Yii::t('app', 'ID'),
+            'card1' => Yii::t('app', 'Card1'),
+            'card2' => Yii::t('app', 'Card2'),
+            'afp2_category_id' => Yii::t('app', 'Afp2 Category ID'),
+            'afp2_user_id' => Yii::t('app', 'Afp2 User ID'),
+        ];
+    }
 }
