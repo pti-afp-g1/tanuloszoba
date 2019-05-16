@@ -20,6 +20,15 @@ class Game {
         $this->setPublicDeck();*/
     }
 
+    private function setCardPairs($size) {
+        if ($size % 2 !== 0) {
+            throw new InvalidArgumentException('The size of the deck must be even!');
+        }
+        $this->cardPairs = CardPair::find()
+            ->orderBy(new Expression('rand()'))
+            ->limit($size)->all();
+    }
+
     public function getDeck() {
         return $this->cardPairs;
     }
