@@ -75,4 +75,10 @@ class CardPairController extends Controller {
             'model' => $model,
         ]);
     }
+      
+    public function actionDelete($id) {
+        $this->findModel($id)->delete();
+
+        return $this->redirect(['index']);
+    }      
 }
