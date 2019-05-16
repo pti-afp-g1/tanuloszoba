@@ -45,6 +45,17 @@ class Game {
         }
     }
 
+    private function setPublicDeck() {
+        foreach ($this->secretDeck as $key => $card) {
+            $pushable = [
+                'key' => $key,
+                'img' => $card['img']
+            ];
+
+            array_push($this->publicDeck, $pushable);
+        }
+    }
+
     public function getDeck() {
         return $this->cardPairs;
     }
