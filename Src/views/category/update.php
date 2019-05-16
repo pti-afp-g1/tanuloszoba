@@ -2,8 +2,6 @@
 
 use yii\helpers\Html;
 
-/* @var $this yii\web\View */
-/* @var $model app\models\Category */
 
 $this->title = Yii::t('app', 'Update Category: {name}', [
     'name' => $model->title,
