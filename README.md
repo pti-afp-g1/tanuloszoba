@@ -9,4 +9,4 @@ Az Eszterházi Károly Egyetem Projektlabor 2. tárgyához készítendő csoport
   - A document root legyen a path/to/tanuloszoba/Src/web
   - Legyen bekapcsolva az AllowOwerride All direktíva
 5. Src/config/db.php a helyes adatbázis adatok beállítása
-6. Src/sql/afp2_dev.sql alkalmazása az adatbázisra!
+6. Src/sql/afp2_dev.sql alkalmazása az adatbázisra
