@@ -56,5 +56,12 @@ class GameController extends Controller {
         return $result;
     }
 
+    public function actionStoreLexicalResult($time, $error) {
+        $lexicalGame = new LexicalGame();
+        $lexicalGame->resolved = $time;
+        $lexicalGame->error = $error;
+        $lexicalGame->save();
+    }
+
 
 }
