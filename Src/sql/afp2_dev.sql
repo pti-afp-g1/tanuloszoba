@@ -10,134 +10,103 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 
-CREATE TABLE `afp2_auth_assignment` (
+DROP TABLE IF EXISTS `afp2_auth_assignment`;
+CREATE TABLE IF NOT EXISTS `afp2_auth_assignment` (
   `item_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `user_id` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
-  `created_at` int(11) DEFAULT NULL
+  `created_at` int(11) DEFAULT NULL,
+  PRIMARY KEY (`item_name`,`user_id`),
+  KEY `afp2_idx-auth_assignment-user_id` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE `afp2_auth_item` (
+DROP TABLE IF EXISTS `afp2_auth_item`;
+CREATE TABLE IF NOT EXISTS `afp2_auth_item` (
   `name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `type` smallint(6) NOT NULL,
   `description` text COLLATE utf8_unicode_ci,
   `rule_name` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
   `data` blob,
   `created_at` int(11) DEFAULT NULL,
-  `updated_at` int(11) DEFAULT NULL
+  `updated_at` int(11) DEFAULT NULL,
+  PRIMARY KEY (`name`),
+  KEY `rule_name` (`rule_name`),
+  KEY `afp2_idx-auth_item-type` (`type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE `afp2_auth_item_child` (
+DROP TABLE IF EXISTS `afp2_auth_item_child`;
+CREATE TABLE IF NOT EXISTS `afp2_auth_item_child` (
   `parent` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
-  `child` varchar(64) COLLATE utf8_unicode_ci NOT NULL
+  `child` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`parent`,`child`),
+  KEY `child` (`child`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE `afp2_auth_rule` (
+DROP TABLE IF EXISTS `afp2_auth_rule`;
+CREATE TABLE IF NOT EXISTS `afp2_auth_rule` (
   `name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `data` blob,
   `created_at` int(11) DEFAULT NULL,
-  `updated_at` int(11) DEFAULT NULL
+  `updated_at` int(11) DEFAULT NULL,
+  PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE `afp2_card_pair` (
-  `id` int(11) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `afp2_card_pair`;
+CREATE TABLE IF NOT EXISTS `afp2_card_pair` (
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `card1` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `card2` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `afp2_category_id` int(11) UNSIGNED NOT NULL,
-  `afp2_user_id` int(11) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `afp2_user_id` int(11) UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_afp2_card_pair_afp2_category1_idx` (`afp2_category_id`),
+  KEY `fk_afp2_card_pair_afp2_user1_idx` (`afp2_user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE `afp2_category` (
-  `id` int(11) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `afp2_category`;
+CREATE TABLE IF NOT EXISTS `afp2_category` (
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `title` varchar(99) COLLATE utf8_unicode_ci NOT NULL,
-  `afp2_user_id` int(11) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `afp2_user_id` int(11) UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_afp2_category_afp2_user1_idx` (`afp2_user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE `afp2_lexical_game` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `start` timestamp(2) NOT NULL DEFAULT CURRENT_TIMESTAMP(2) ON UPDATE CURRENT_TIMESTAMP(2),
-  `end` timestamp(2) NULL DEFAULT NULL,
-  `resolved` timestamp(2) NULL DEFAULT NULL,
+DROP TABLE IF EXISTS `afp2_lexical_game`;
+CREATE TABLE IF NOT EXISTS `afp2_lexical_game` (
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `resolved` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
   `error` int(4) DEFAULT NULL,
-  `afp2_user_id` int(11) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `afp2_user_id` int(11) UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_afp2_memory_game_afp2_user1_idx` (`afp2_user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE `afp2_memory_game` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `start` timestamp(2) NOT NULL DEFAULT CURRENT_TIMESTAMP(2) ON UPDATE CURRENT_TIMESTAMP(2),
-  `end` timestamp(2) NULL DEFAULT NULL,
-  `resolved` timestamp(2) NULL DEFAULT NULL,
-  `afp2_user_id` int(11) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+DROP TABLE IF EXISTS `afp2_memory_game`;
+CREATE TABLE IF NOT EXISTS `afp2_memory_game` (
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `resolved` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `afp2_user_id` int(11) UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_afp2_memory_game_afp2_user1_idx` (`afp2_user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE `afp2_migration` (
+DROP TABLE IF EXISTS `afp2_migration`;
+CREATE TABLE IF NOT EXISTS `afp2_migration` (
   `version` varchar(180) COLLATE utf8_unicode_ci NOT NULL,
-  `apply_time` int(11) DEFAULT NULL
+  `apply_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE `afp2_user` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `afp2_user`;
+CREATE TABLE IF NOT EXISTS `afp2_user` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `username` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(99) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-
-ALTER TABLE `afp2_auth_assignment`
-  ADD PRIMARY KEY (`item_name`,`user_id`),
-  ADD KEY `afp2_idx-auth_assignment-user_id` (`user_id`);
-
-ALTER TABLE `afp2_auth_item`
-  ADD PRIMARY KEY (`name`),
-  ADD KEY `rule_name` (`rule_name`),
-  ADD KEY `afp2_idx-auth_item-type` (`type`);
-
-ALTER TABLE `afp2_auth_item_child`
-  ADD PRIMARY KEY (`parent`,`child`),
-  ADD KEY `child` (`child`);
-
-ALTER TABLE `afp2_auth_rule`
-  ADD PRIMARY KEY (`name`);
-
-ALTER TABLE `afp2_card_pair`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_afp2_card_pair_afp2_category1_idx` (`afp2_category_id`),
-  ADD KEY `fk_afp2_card_pair_afp2_user1_idx` (`afp2_user_id`);
-
-ALTER TABLE `afp2_category`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_afp2_category_afp2_user1_idx` (`afp2_user_id`);
-
-ALTER TABLE `afp2_lexical_game`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_afp2_memory_game_afp2_user1_idx` (`afp2_user_id`);
-
-ALTER TABLE `afp2_memory_game`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_afp2_memory_game_afp2_user1_idx` (`afp2_user_id`);
-
-ALTER TABLE `afp2_migration`
-  ADD PRIMARY KEY (`version`);
-
-ALTER TABLE `afp2_user`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`),
-  ADD UNIQUE KEY `email` (`email`);
-
-
-ALTER TABLE `afp2_card_pair`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
-
-ALTER TABLE `afp2_category`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
-ALTER TABLE `afp2_lexical_game`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
-
-ALTER TABLE `afp2_memory_game`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
-
-ALTER TABLE `afp2_user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 ALTER TABLE `afp2_auth_assignment`
