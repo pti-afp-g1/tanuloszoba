@@ -63,5 +63,10 @@ class GameController extends Controller {
         $lexicalGame->save();
     }
 
+    public function actionStoreMemoryResult($time) {
+        $lexicalGame = new MemoryGame();
+        $lexicalGame->resolved = $time;
+        $lexicalGame->save();
+    }
 
 }
