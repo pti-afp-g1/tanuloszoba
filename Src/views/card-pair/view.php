@@ -4,8 +4,7 @@ use yii\helpers\Html;
 use yii\web\YiiAsset;
 use yii\widgets\DetailView;
 
-/* @var $this yii\web\View */
-/* @var $model app\models\CardPair */
+
 
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Card Pairs'), 'url' => ['index']];
