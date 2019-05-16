@@ -34,4 +34,8 @@ class CardPair extends ActiveRecord
             'afp2_user_id' => Yii::t('app', 'Afp2 User ID'),
         ];
     }
+	public function getCategory() 
+	{
+        return $this->hasOne(Category::class, ['id' => 'afp2_category_id']);
+    }
 }
