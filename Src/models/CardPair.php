@@ -43,4 +43,9 @@ class CardPair extends ActiveRecord
 	{
         return $this->hasOne(User::class, ['id' => 'afp2_user_id']);
     }
+	
+    public static function find() 
+	{
+        return new CardPairQuery(get_called_class());
+    }
 }
