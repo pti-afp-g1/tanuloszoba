@@ -2,8 +2,7 @@
 
 use yii\helpers\Html;
 
-/* @var $this yii\web\View */
-/* @var $model app\models\CardPair */
+
 
 $this->title = Yii::t('app', 'Update Card Pair: {name}', [
     'name' => $model->id,
