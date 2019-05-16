@@ -29,6 +29,22 @@ class Game {
             ->limit($size)->all();
     }
 
+    private function setSecretDeck() {
+        foreach ($this->cardPairs as $cardPair) {
+            $pushable1 = [
+                'id' => $cardPair->id,
+                'img' => $cardPair->card1
+            ];
+            $pushable2 = [
+                'id' => $cardPair->id,
+                'img' => $cardPair->card2
+            ];
+
+            array_push($this->secretDeck, $pushable1);
+            array_push($this->secretDeck, $pushable2);
+        }
+    }
+
     public function getDeck() {
         return $this->cardPairs;
     }
