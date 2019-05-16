@@ -2,8 +2,7 @@
 
 use yii\helpers\Html;
 
-/* @var $this yii\web\View */
-/* @var $model app\models\CardPair */
+
 
 $this->title = Yii::t('app', 'Create Card Pair');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Card Pairs'), 'url' => ['index']];
