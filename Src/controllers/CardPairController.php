@@ -89,4 +89,27 @@ class CardPairController extends Controller {
 
         throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
     }
+      
+    public function actionUpload() {
+        $valid_extensions = array('jpeg', 'jpg', 'png', 'gif', 'bmp');
+        $path = Yii::$app->basePath . '/web/uploads/';
+        if ($_FILES['image']) {
+
+            $img = $_FILES['image']['name'];
+            $tmp = $_FILES['image']['tmp_name'];
+
+            $ext = strtolower(pathinfo($img, PATHINFO_EXTENSION));
+            $uuid = UuidHelper::uuid();
+            $final_image = $uuid . '.' . $ext;
+
+            if (in_array($ext, $valid_extensions)) {
+                $path = $path . strtolower($final_image);
+                if (move_uploaded_file($tmp, $path)) {
+                    return $final_image;
+                }
+            } else {
+                return 'invalid';
+            }
+        }
+    }
 }
