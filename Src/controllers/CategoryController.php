@@ -43,4 +43,11 @@ class CategoryController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+    
+    public function actionView($id)
+    {
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
+    }    
 }
