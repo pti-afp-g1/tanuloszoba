@@ -3,9 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-/* @var $this yii\web\View */
-/* @var $model app\models\CardPairSearch */
-/* @var $form yii\widgets\ActiveForm */
+
 ?>
 
 <div class="card-pair-search">
