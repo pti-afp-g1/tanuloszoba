@@ -13,4 +13,13 @@ class Category extends ActiveRecord
         return '{{%category}}';
     }
 	
+    public function rules()
+    {
+        return [
+            [['title'], 'required'],
+            [['afp2_user_id'], 'integer'],
+            [['title'], 'string', 'max' => 99],
+            [['afp2_user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['afp2_user_id' => 'id']],
+        ];
+    }	
 }
