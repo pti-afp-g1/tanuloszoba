@@ -46,4 +46,10 @@ class Category extends ActiveRecord
     {
         return new CategoryQuery(get_called_class());
     }
+
+    public function beforeSave($insert) 
+	{
+        $this->afp2_user_id = Yii::$app->user->id;
+        return parent::beforeSave($insert);
+    }
 }
