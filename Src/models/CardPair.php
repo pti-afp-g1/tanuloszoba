@@ -38,4 +38,9 @@ class CardPair extends ActiveRecord
 	{
         return $this->hasOne(Category::class, ['id' => 'afp2_category_id']);
     }
+	
+    public function getUser() 
+	{
+        return $this->hasOne(User::class, ['id' => 'afp2_user_id']);
+    }
 }
