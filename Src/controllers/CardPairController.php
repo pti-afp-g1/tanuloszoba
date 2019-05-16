@@ -80,5 +80,13 @@ class CardPairController extends Controller {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
-    }      
+    }
+      
+    protected function findModel($id) {
+        if (($model = CardPair::findOne($id)) !== null) {
+            return $model;
+        }
+
+        throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
+    }
 }
