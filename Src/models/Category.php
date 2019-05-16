@@ -36,4 +36,9 @@ class Category extends ActiveRecord
     {
         return $this->hasMany(CardPair::class, ['afp2_category_id' => 'id']);
     }
+	
+    public function getUser()
+    {
+        return $this->hasOne(User::class, ['id' => 'afp2_user_id']);
+    }
 }
