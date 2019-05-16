@@ -60,7 +60,7 @@ class CardPairController extends Controller {
         }
 
         return $this->render('create', [
-            'model' => $moel,
+            'model' => $model,
         ]);
     }
 }
