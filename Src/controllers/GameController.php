@@ -33,5 +33,13 @@ class GameController extends Controller {
         return $this->render('index');
     }
 
+    public function actionLexical() {
+        $game = new Game(6);
+        $deck = $game->getPublicDeck();
+        $uuid = UuidHelper::uuid();
+        $_SESSION[$uuid] = $game->getSecretDeck();
+        return $this->render('lexical', ['deck' => $deck, 'uuid' => $uuid]);
+    }
+
 
 }
