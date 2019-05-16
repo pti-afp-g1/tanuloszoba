@@ -48,5 +48,13 @@ class GameController extends Controller {
         return $this->render('memory', ['deck' => $deck, 'uuid' => $uuid]);
     }
 
+    public function actionLexicalCheck() {
+        $data = Yii::$app->request->post();
+        $list = $data['list'];
+        $identifier = $data['identifier'];
+        $result = Game::checkResult($list, $identifier);
+        return $result;
+    }
+
 
 }
