@@ -27,5 +27,8 @@ A későbbikben ezen funkciók jó része nem manuálisan fog történni, ennek 
 - Információs főoldal. Röviden leírja, hogy ki milyen szolgáltatást nyújt ez az oldal
 - Regisztráció. Minden vendégnek joga van tanulóként regisztrálni. Tanári jogkört csak az adminisztrátor adhat.
 - Bejelentkezés. Első körben mindenki vendégként van nyilvántartva, de a regisztráltak itt beléphetnek.
+
+![plan](tanuloszoba_01.png)
+
 ### Megjegyzés
 Ha a Jogok menüpontból a második lehetőséget választjuk, akkor a felhasználó jog = diák jog
